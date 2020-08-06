@@ -83,6 +83,7 @@ class HomePage extends StatelessWidget {
                           )),
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
                           tx.title,

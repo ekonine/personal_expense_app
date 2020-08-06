@@ -58,12 +58,10 @@ class HomePage extends StatelessWidget {
               child: Text('Chart'),
             ),
           ),
-          Container(
-            height: 60,
-            child: Card(
-              color: Colors.red,
-              child: Text('List of Transactions'),
-            ),
+          Column(
+            children: transactions.map((tx) {
+              return Card(child: Text(tx.title));
+            }).toList(),
           ),
         ],
       ),

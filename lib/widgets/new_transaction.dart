@@ -26,6 +26,8 @@ class _NewTransactionState extends State<NewTransaction> {
       enteredTitle,
       enteredAmount,
     );
+
+    Navigator.of(context).pop();
   }
 
   @override
@@ -46,11 +48,6 @@ class _NewTransactionState extends State<NewTransaction> {
               controller: amountController,
               keyboardType: TextInputType.number,
               onSubmitted: (_) => submitData(),
-            ),
-            FlatButton(
-              child: Text('Add Transaction'),
-              textColor: Colors.purple,
-              onPressed: submitData,
             ),
           ],
         ),

@@ -15,7 +15,6 @@ class App extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-
   final titleController = TextEditingController();
   final amountController = TextEditingController();
 
@@ -25,18 +24,20 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Personal Expense App'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            height: 100,
-            child: Card(
-              child: Text('Chart'),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              height: 100,
+              child: Card(
+                child: Text('Chart'),
+              ),
             ),
-          ),
-          UserTransactions(),
-        ],
+            UserTransactions(),
+          ],
+        ),
       ),
     );
   }
